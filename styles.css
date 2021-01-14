@@ -42,6 +42,7 @@ h3 {
 }
 
 a {
+  color: var(--primary-color);
   text-decoration-color: var(--tertiary-color);
   text-decoration-style: dashed;
   text-underline-position: under;
