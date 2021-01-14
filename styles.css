@@ -1,0 +1,113 @@
+:root {
+  /* Fonts */
+  --body-font: "Open Sans", sans-serif;
+  --heading-font: "Poppins", sans-serif;
+
+  /* Colors */
+  --primary-color: #212f3c;
+  --secondary-color: #c2e0f9;
+  --tertiary-color: #7cbdf2;
+  --complementary-color: #f9c2c5;
+  --bg-color: #fbfcfc;
+
+  /* Motion */
+  --fast-motion: 75ms;
+}
+
+html,
+body {
+  font-family: var(--body-font);
+  color: var(--primary-color);
+  background: var(--bg-color);
+  box-sizing: border-box;
+  line-height: 1.2;
+}
+
+body {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1;
+  padding: 0 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+
+a {
+  text-decoration-color: var(--tertiary-color);
+  text-decoration-style: dashed;
+  text-underline-position: under;
+  transition: all var(--fast-motion);
+}
+
+a:hover {
+  text-decoration-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+a:visited {
+  color: var(--primary-color);
+}
+
+.--complement {
+  color: var(--complementary-color);
+}
+
+.--emphasis {
+  background-image: linear-gradient(
+    to top,
+    var(--secondary-color) 40%,
+    transparent 40%
+  );
+  width: auto;
+  display: inline;
+  line-height: 1.5;
+  padding-right: 0.5rem;
+}
+
+.--emphasis.--complement {
+  color: inherit;
+  background-image: linear-gradient(
+    to top,
+    var(--complementary-color) 40%,
+    transparent 40%
+  );
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  background-color: var(--bg-color);
+  border: var(--primary-color) 1px solid;
+  padding: 0.375rem 0.625rem;
+  z-index: 1;
+  text-decoration: none;
+  transition: transform, color, background-color, box-shadow;
+  transition-duration: var(--fast-motion);
+  box-shadow: -3px 3px var(--secondary-color);
+  z-index: 1;
+}
+
+.btn:hover {
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  border-color: var(--bg-color);
+  box-shadow: -5px 5px var(--secondary-color);
+  z-index: 0;
+}
+
+.card {
+  color: var(--bg-color);
+  background: var(--primary-color);
+  box-shadow: -4px 4px var(--secondary-color);
+  border: 1px solid var(--bg-color);
+  padding: 1rem;
+}
